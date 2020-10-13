@@ -11,9 +11,9 @@ public class ThreadedGreeter implements Runnable {
 	public void run() {
 		System.out.println("Hello from thread number: " + num);
 
-		if (num <= 50) {
+		if (num <= 49) {
 			ThreadedGreeter t = new ThreadedGreeter(num + 1);
-
+			t.run();
 		}
 
 	}
